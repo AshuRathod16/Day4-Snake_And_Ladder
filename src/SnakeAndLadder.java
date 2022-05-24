@@ -10,29 +10,36 @@ public class SnakeAndLadder {
 
         while (position < 100) {
             Random ran = new Random();
-            int dice = ran.nextInt(6) + 1;
+            int dice = ran.nextInt(6)+1;
 
             System.out.println("dice: " + dice);
             int optCheck = ran.nextInt(3);
             System.out.println("optCheck: " + optCheck);
 
-            if ((optCheck == ladder) && (position + dice) <= 100) {
+            if ((optCheck == ladder) && (position + dice) <= 100)
+            {
                 System.out.println("Ladder");
                 position = position + dice;
-            } else if (optCheck == snake) {
+            }
+
+            else if (optCheck == snake)
+            {
                 System.out.println("Snake");
                 position = position - dice;
-            } else {
+            }
+
+            else
+            {
                 System.out.println("No Play");
             }
+
             if (position < 0)
                 position = 0;
+
             System.out.println("position: " + position);
         }
 
     }
 }
-
-
 
 
